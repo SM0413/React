@@ -16,7 +16,6 @@
             }
             const reset = () => setAmount(0);
             const onInvert = () =>{
-                reset();
                 setInverted((current) => !current);
             }
             return(
@@ -104,6 +103,7 @@
                         <option value = "0"> Minutes & Hours </option>    
                         <option value = "1"> Km & Miles </option>
                     </select>
+                    <br/>
                     {index === "select" ? "Please Select Your Units" : null}
                     {index === "0" ? <MinutesToHours />  : null}
                     {index === "1" ? <KmToMiles /> : null}
@@ -112,6 +112,6 @@
         }
         const root = document.getElementById("root");
         ReactDOM.render(<App />, root);
-        
+
     </script>
 </html>
